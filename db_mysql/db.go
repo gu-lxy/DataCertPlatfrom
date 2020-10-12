@@ -4,9 +4,10 @@ import (
 	beego "beego-develop"
 	"database/sql"
 	"fmt"
-	_"github.com/go-sql-driver/mysql"
+	_ "github.com/go-sql-driver/mysql"
 )
 
+//Db数据库连接池
 var Db *sql.DB
 
 //数据库的连接
@@ -20,7 +21,8 @@ func Connect() {
 	dbName := config.String("db_name")
 	fmt.Println(driver,dbUser,dbPasssword,dbIp,dbName)
 	//连接数据库
-	db, err := sql.Open(driver+":"+dbUser+":" +dbPasssword+"@tcp(" +dbIp+")/"+dbName+"?charset=utf8")
+	connUrl := driver+":"+dbUser+":" +dbPasssword+"@tcp(" +dbIp+")/"+dbName+"?charset=utf8"
+	db,err:=sql.Open(driver,connUrl)
 	if err != nil {
 		panic("数据库连接失败。请重新尝试")
 	}

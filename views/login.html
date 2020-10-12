@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+
+        * {
+            background-color: #0084C9;
+        }
+
+        .login {
+            width: 500px;
+            height: auto;
+            padding: 50px;
+            margin: 100px auto;
+            background-color: bisque;
+        }
+        .login h2 {
+            background-color: bisque;
+            color: black;
+            text-align: center;
+        }
+        .login ul li {
+            background-color: bisque;
+            padding-top: 20px;
+            list-style: none;
+        }
+        .login ul li span {
+            background-color: bisque;
+            display: inline-block;
+            width: 125px;
+            height: 30px;
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .login ul li input[type="text"], .login ul li input[type="password"] {
+            background-color: white;
+            width: 250px;
+            height: 30px;
+            padding: 0 5px;
+        }
+
+        .login ul li .verifyimg {
+            width: 260px;
+            margin-left: 130px;
+            background: #1696d7;
+        }
+
+        .login ul li input[type="submit"] {
+            width: 80px;
+            height: 30px;
+            boeder: none;
+            background: #333333;
+            color: #fff;
+            font-size: 14px;
+            margin-left: 100px;
+            cursor: pointer;
+        }
+
+        .login ul li input[type="reset"] {
+            width: 80px;
+            height: 30px;
+            boeder: none;
+            background: #333333;
+            color: #fff;
+            font-size: 14px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .login ul li a {
+            background-color: bisque;
+            color: white;
+            font-size: 14px;
+            margin-left: 20px;
+            text-decoration-line: none;
+        }
+
+        .login ul li input[type="submit"]:hover {
+            background: #00497d;
+        }
+
+        .login ul li input[type="reset"]:hover {
+            background: #00497d;
+        }
+
+        .login span #text {
+            display: inline-block;
+            width: 130px;
+            height: 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="login">
+    <h2>电子数据用户登录</h2>
+    <form action="/loign" method="post">
+        <ul>
+            <li>
+				<span id="">
+						用户账号:
+				</span>
+                <input type="password" name="user_pwd" id="" value="" />
+            </li>
+            <li>
+				<span id="">
+						用户密码:
+				</span>
+                <input type="password" name="user_pwd" id="" value="" />
+            </li>
+            <li>
+                <input type="submit" name="login" value="登录" />
+                <input type="submit" name="login" value="注册" />
+            </li>
+        </ul>
+    </form>
+</div>
+</body>
+</html>
