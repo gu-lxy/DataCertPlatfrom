@@ -12,5 +12,6 @@ func init() {
     beego.Router("/register", &controllers.RegisterController{})
     //用户登录接口
     beego.Router("/login",&controllers.RegisterController{})
-
+    //指用户上传的文件功能
+    beego.Router("/upload",&controllers.UploadFilController{})
 }
