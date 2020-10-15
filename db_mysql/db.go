@@ -22,6 +22,7 @@ func Connect() {
 	fmt.Println(driver,dbUser,dbPasssword,dbIp,dbName)
 	//连接数据库
 	connUrl := driver+":"+dbUser+":" +dbPasssword+"@tcp(" +dbIp+")/"+dbName+"?charset=utf8"
+	fmt.Println(connUrl)
 	db,err:=sql.Open(driver,connUrl)
 	if err != nil {
 		panic("数据库连接失败。请重新尝试")

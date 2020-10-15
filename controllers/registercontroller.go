@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"DataCertPlatfrom/models"
+	"fmt"
 	"github.com/astaxie/beego"
 )
 
@@ -22,6 +23,7 @@ func (r *RegisterController) Post(){
 	//2、将解析到底数据保存到数据库中
 	_, err = user.AddUser()
 	if err != nil {
+		fmt.Println(err.Error())
 		r.Ctx.WriteString("抱歉，用户注册失败，请重试")
 		return
 	}
