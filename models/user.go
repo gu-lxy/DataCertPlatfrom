@@ -7,8 +7,8 @@ import (
 )
 
 type User struct {
-	Id int `form:"id"`
-	Phone string `from:"phone"`
+	Id       int `form:"id"`
+	Phone    string `from:"phone"`
 	Password string `from:"password"`
 }
 //将用户的信息保存到数据库中
@@ -46,4 +46,14 @@ func (u User) QueryUser() (*User,error) {
 		return nil,err
 	}
 	return &u,nil
+}
+
+func (u User) QueryUserByPhone() (interface{}, error) {
+	row := db_mysql.Db.QueryRow("select id from user where phone = ?", u.Phone)
+	var user User
+	err := row.Scan(&user.Id)
+	if err != nil {
+		return nil, err
+	}
+	return &user, nil
 }

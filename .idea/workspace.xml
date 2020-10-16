@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1987459-078d-4ce9-9cdb-1face2632483" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/uploadRecord.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/list_record.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/UploadFileController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UploadFileController.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/registercontroller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registercontroller.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db_mysql/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/db_mysql/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/uploadRecord.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/uploadRecord.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Go File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -47,6 +49,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -81,10 +84,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="74" key="#Inspections" timestamp="1602360353388">
+    <state x="361" y="74" key="#Inspections" timestamp="1602832885254">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="74" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1602360353388" />
+    <state x="361" y="74" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1602832885254" />
     <state x="173" y="138" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602415419090">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -93,22 +96,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602360187739" />
-    <state width="1493" height="401" key="GridCell.Tab.0.bottom" timestamp="1602766832651">
+    <state width="812" height="2" key="GridCell.Tab.0.bottom" timestamp="1602834646634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="401" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602766832651" />
-    <state width="1493" height="401" key="GridCell.Tab.0.center" timestamp="1602766832651">
+    <state width="812" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602834646634" />
+    <state width="812" height="2" key="GridCell.Tab.0.center" timestamp="1602834646634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="401" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602766832651" />
-    <state width="1493" height="401" key="GridCell.Tab.0.left" timestamp="1602766832650">
+    <state width="812" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602834646634" />
+    <state width="812" height="2" key="GridCell.Tab.0.left" timestamp="1602834646634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="401" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602766832649" />
-    <state width="1493" height="401" key="GridCell.Tab.0.right" timestamp="1602766832651">
+    <state width="812" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602834646634" />
+    <state width="812" height="2" key="GridCell.Tab.0.right" timestamp="1602834646634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="401" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602766832651" />
+    <state width="812" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602834646634" />
+    <state x="544" y="58" key="SettingsEditor" timestamp="1602833981599">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="544" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602833981599" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602726020931">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
