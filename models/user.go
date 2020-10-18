@@ -2,8 +2,7 @@ package models
 
 import (
 	"DataCertPlatfrom/db_mysql"
-	"crypto/md5"
-	"encoding/hex"
+	"DataCertPlatfrom/utils"
 )
 
 type User struct {
@@ -13,10 +12,7 @@ type User struct {
 }
 //将用户的信息保存到数据库中
 func (u User) AddUser() (int64,error) {
-	hashMd5 := md5.New()
-	hashMd5.Write([]byte(u.Password))
-	pwdBytes := hashMd5.Sum(nil)
-	u.Password = hex.EncodeToString(pwdBytes)
+	u.Password = utils.MD5HashString(u.Password)
 
 	rs, err := db_mysql.Db.Exec("insert into user(phone,password) values(?.?)",
 		u.Phone, u.Password)
@@ -34,10 +30,7 @@ func (u User) AddUser() (int64,error) {
 
 //查询用户信息
 func (u User) QueryUser() (*User,error) {
-	hashMd5 := md5.New()
-	hashMd5.Write([]byte(u.Password))
-	pwdBytes := hashMd5.Sum(nil)
-	u.Password = hex.EncodeToString(pwdBytes)
+	u.Password = utils.MD5HashString(u.Password)
 
 	row := db_mysql.Db.QueryRow("select phone from user where phone = ? and password = ?",
 	u.Phone, u.Password	)
