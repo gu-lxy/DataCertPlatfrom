@@ -41,7 +41,7 @@ func (u User) QueryUser() (*User,error) {
 	return &u,nil
 }
 
-func (u User) QueryUserByPhone() (interface{}, error) {
+func (u User) QueryUserByPhone() (*User, error) {
 	row := db_mysql.Db.QueryRow("select id from user where phone = ?", u.Phone)
 	var user User
 	err := row.Scan(&user.Id)
