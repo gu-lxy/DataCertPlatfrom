@@ -2,25 +2,29 @@ package utils
 
 import (
 	"crypto/md5"
-	"crypto/sha256"
 	"encoding/hex"
-	"fmt"
 	"io"
+	"crypto/sha256"
 	"io/ioutil"
 )
 
-//对一个字符串MD5进行hash
-func MD5HashString(data string) string{
+/**
+ * 对一个字符串数据进行MD5哈希计算
+ */
+func MD5HashString(data string) string {
 	md5Hash := md5.New()
 	md5Hash.Write([]byte(data))
 	bytes := md5Hash.Sum(nil)
 	return hex.EncodeToString(bytes)
 }
 
-func MD5HashReader(reader io.Reader) (string, error)  {
+/**
+ * io:input output 输入和输出
+ */
+func MD5HashReader(reader io.Reader) (string, error) {
 	md5Hash := md5.New()
 	readerBytes, err := ioutil.ReadAll(reader)
-	fmt.Println("读取到的文件：", readerBytes)
+	//fmt.Println("读取到的文件:", readerBytes)
 	if err != nil {
 		return "", err
 	}
@@ -29,14 +33,27 @@ func MD5HashReader(reader io.Reader) (string, error)  {
 	return hex.EncodeToString(hashBytes), nil
 }
 
-
+/**
+ * 读取io流中的数据，并对数据进行hash计算,返回sha256 hash值。
+ */
 func SHA256HashReader(reader io.Reader) (string, error) {
-	sha256 := sha256.New()
+	sha256Hash := sha256.New()
 	readerBytes, err := ioutil.ReadAll(reader)
 	if err != nil {
 		return "", err
 	}
-	sha256.Write(readerBytes)
-	hashBytes := sha256.Sum(nil)
+	sha256Hash.Write(readerBytes)
+	hashBytes := sha256Hash.Sum(nil)
 	return hex.EncodeToString(hashBytes), nil
+}
+
+/**
+ * 对区块数据进行SHA256哈希计算
+ */
+func SHA256HashBlock(bs []byte) []byte {
+	//2、将转换后的[]byte字节切片输入Write方法
+	sha256Hash := sha256.New()
+	sha256Hash.Write(bs)
+	hash := sha256Hash.Sum(nil)
+	return hash
 }

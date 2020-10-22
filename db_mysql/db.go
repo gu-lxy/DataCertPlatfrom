@@ -1,32 +1,42 @@
 package db_mysql
 
 import (
-	beego "beego-develop"
 	"database/sql"
-	"fmt"
+	"github.com/astaxie/beego"
 	_ "github.com/go-sql-driver/mysql"
 )
 
-//Db数据库连接池
 var Db *sql.DB
 
-//数据库的连接
-func Connect() {
+/**
+ * 数据库连接
+ */
+func Connect(){
 	//项目配置
 	config := beego.AppConfig
-	driver := config.String("db_driver")//数据库驱动
-	dbUser := config.String("db_user")//数据库用户名
-	dbPasssword := config.String("db_password")//密码
+	dbDriver := config.String("db_driver")
+	dbUser := config.String("db_user")
+	dbPassword := config.String("db_password")
 	dbIp := config.String("db_ip")
 	dbName := config.String("db_name")
-	fmt.Println(driver,dbUser,dbPasssword,dbIp,dbName)
+	//fmt.Println(dbDriver,dbUser,dbPassword,dbName)
+
 	//连接数据库
 	connUrl := dbUser +":" + dbPassword + "@tcp("+dbIp+")/"+dbName+"?charset=utf8"
-	fmt.Println(connUrl)
-	db,err:=sql.Open(driver,connUrl)
-	if err != nil {
-		panic("数据库连接失败。请重新尝试")
+	db, err := sql.Open(dbDriver,connUrl)
+	if err != nil {// err不为nil，表示连接数据库时出现了错误, 程序就在此中断就可以，不用再执行了。
+		//早发现，早解决
+		panic("数据库连接错误，请检查配置")
 	}
+
 	Db = db
 }
 
+
+//1、保存用户方法
+
+//2、登录的方法
+
+//3、文件上传
+
+//4、...

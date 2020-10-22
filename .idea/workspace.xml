@@ -1,25 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1987459-078d-4ce9-9cdb-1face2632483" name="Default Changelist" comment="" />
+    <list default="true" id="f15ae47a-67ff-42cb-b8d6-259d26e027e0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/blockchain/pow.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/convert.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DataCertPlatfrom.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockchain/block.go" beforeDir="false" afterPath="$PROJECT_DIR$/blockchain/block.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/LoginController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/LoginController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/UploadFileController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UploadFileController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/default.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/default.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/registercontroller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/registercontroller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db_mysql/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/db_mysql/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/uploadRecord.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/uploadRecord.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/ca1349540923dd54564eac1d9a43a4de9c82d158e226.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/first-new-9uiDBCE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/first_small_h_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/home-core-2-c8EGkeQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/home-core-4-19-VLNX.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/home-core-6-fY92OEw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/home-core-8-6syTh9u.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/home-partner-6r1d_Wg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/second_small_h_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/微信图片_20201011031544.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/HomeNew-f8f62.chunk.js.下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/UserLoginForm-86fb5.chunk.js.下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/UserRegistryForm-ef59c.chunk.js.下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/app-f03c3be68c19ce58d4ff.js.下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/b.js.下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/common-f03c3be68c19ce58d4ff.js.下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/data-set.min.js.下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/es6-shim-8e9077312e.js.下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/hm.js(1).下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/hm.js(2).下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/hm.js.下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/jquery-02053ebe83.js.下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/pc_nb.js.下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/poll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/push.js.下载" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/set-cookies" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/default_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/file.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/hash.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/hash.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/time.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/time.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/list_record.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/list_record.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/register.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="Go File" />
-      </list>
-    </option>
-  </component>
-  <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1ihF6OtVsCV6TnQREFOetUs2fbH" />
+  <component name="ProjectId" id="1jEQBxqfoTZXpuDd4Rcc5dr1saH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,89 +71,16 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\GoProjects\src\DataCertPlatfrom\static\css" />
-      <recent name="C:\GoProjects\src\DataCertPlatfrom\static\js" />
-      <recent name="C:\GoProjects\src\DataCertPlatfrom\static\img" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\GoProjects\src\DataCertPlatfrom\static\js" />
-      <recent name="C:\GoProjects\src\DataCertPlatfrom\static\css" />
-      <recent name="C:\GoProjects\src\DataCertPlatfrom\static\img" />
-      <recent name="C:\GoProjects\src\DataCertPlatfrom\static" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="go build DataCertPlatfrom" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="DataCertPlatfrom" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="DataCertPlatfrom" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Build.go build DataCertPlatfrom" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <property name="settings.editor.selected.configurable" value="go" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="74" key="#Inspections" timestamp="1602832885254">
+    <state x="933" y="171" key="FileChooserDialogImpl" timestamp="1603366662936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="74" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1602832885254" />
-    <state x="173" y="138" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602415419090">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="173" y="138" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1602415419090" />
-    <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1603027683522">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603027683522" />
-    <state width="1493" height="252" key="GridCell.Tab.0.bottom" timestamp="1603078863144">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="252" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603078863144" />
-    <state width="1493" height="252" key="GridCell.Tab.0.center" timestamp="1603078863144">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="252" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603078863144" />
-    <state width="1493" height="252" key="GridCell.Tab.0.left" timestamp="1603078863144">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="252" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603078863144" />
-    <state width="1493" height="252" key="GridCell.Tab.0.right" timestamp="1603078863144">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="252" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603078863144" />
-    <state x="544" y="58" key="SettingsEditor" timestamp="1602833981599">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="544" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1602833981599" />
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603107973577">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603107973577" />
+    <state x="933" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603366662936" />
   </component>
 </project>
