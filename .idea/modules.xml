@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DataCertPlatfrom.iml" filepath="$PROJECT_DIR$/.idea/DataCertPlatfrom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DataCertPlatform.iml" filepath="$PROJECT_DIR$/.idea/DataCertPlatform.iml" />
     </modules>
   </component>
 </project>
