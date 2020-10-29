@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"DataCertPlatform/blockchain"
 	"github.com/astaxie/beego"
 	"fmt"
 	"strings"
@@ -78,6 +79,10 @@ func (u *UploadFileController) Post() {
 		u.Ctx.WriteString("抱歉，电子数据认证保存失败，请稍后再试!")
 		return
 	}
+
+	//③将用户上传的文件的MD5值和sha256只保存到区块链上，即数据上链
+	blockchain.CHAIN.SaveData([]byte(fileHash))
+
 	//上传文件保存到数据库中成功
 	records, err := models.QueryRecordsByUserId(user1.Id)
 	if err != nil {
@@ -88,6 +93,7 @@ func (u *UploadFileController) Post() {
 	u.Data["Records"] = records
 	u.TplName = "list_record.html"
 }
+
 
 /**
  * 该post方法用于处理用户在客户端提交的认证文件
