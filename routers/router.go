@@ -16,5 +16,6 @@ func init() {
     beego.Router("/login.html", &controllers.LoginController{})
     //用户上传文件的功能
     beego.Router("/upload",&controllers.UploadFileController{})
-
+	//用户实名认证请求
+	beego.Router("/user_kyc", &controllers.UserKycController{})
 }
