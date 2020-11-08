@@ -2,19 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d576fe6-62b2-4409-bdef-92e379ee2d87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/certDetailController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/userKycController.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/certRecord.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/app-de629dfeac93cb9584b8.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/cert_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/user_kyc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/loginSmsController.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/sendSmsController.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/smsLogin.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/smsRecord.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/sendSms.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blockchain/blockChain.go" beforeDir="false" afterPath="$PROJECT_DIR$/blockchain/blockChain.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blockchain/pow.go" beforeDir="false" afterPath="$PROJECT_DIR$/blockchain/pow.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/LoginController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/LoginController.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/UploadFileController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/UploadFileController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/certDetailController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/certDetailController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/default.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/default.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/userKycController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/userKycController.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/certRecord.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/certRecord.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/uploadRecord.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/uploadRecord.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/list_record.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/list_record.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/cert_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/cert_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +74,7 @@
       <recent name="C:\GoProjects\src\DataCertPlatform\static\css" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build DataCertPlatform">
     <configuration name="go build DataCertPlatform" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="DataCertPlatform" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -76,9 +84,19 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build smsRecord.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="DataCertPlatform" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/models/smsRecord.go" />
+      <package value="DataCertPlatform" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build DataCertPlatform" />
+        <item itemvalue="Go Build.go build smsRecord.go" />
       </list>
     </recent_temporary>
   </component>
@@ -86,25 +104,29 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="868" y="76" key="#go_build_smsRecord.go" timestamp="1604834710737">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="868" y="76" key="#go_build_smsRecord.go/0.0.1536.824@0.0.1536.824" timestamp="1604834710737" />
     <state x="933" y="171" key="FileChooserDialogImpl" timestamp="1603780853889">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="933" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603780853889" />
-    <state width="644" height="208" key="GridCell.Tab.0.bottom" timestamp="1604041478268">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1604294390741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="644" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604041478268" />
-    <state width="644" height="208" key="GridCell.Tab.0.center" timestamp="1604041478268">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604294390741" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1604294390741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="644" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604041478268" />
-    <state width="644" height="208" key="GridCell.Tab.0.left" timestamp="1604041478267">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604294390741" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1604294390741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="644" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604041478267" />
-    <state width="644" height="208" key="GridCell.Tab.0.right" timestamp="1604041478268">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604294390741" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1604294390741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="644" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604041478268" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604294390741" />
   </component>
 </project>

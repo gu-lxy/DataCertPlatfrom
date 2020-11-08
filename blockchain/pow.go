@@ -3,7 +3,6 @@ package blockchain
 import (
 	"math/big"
 	"DataCertPlatform/utils"
-	"fmt"
 	"bytes"
 )
 
@@ -64,7 +63,7 @@ func (p ProofOfWork) Run() ([]byte, int64) {
 		hashBig = new(big.Int) //分配内存空间，为变量分配地址，
 		//xx : invalid memory or nil pointer dereference 空指针错误
 		hashBig = hashBig.SetBytes(blockHash)
-		fmt.Println("当前尝试的Nonce值:", nonce)
+		//fmt.Println("当前尝试的Nonce值:", nonce)
 		if hashBig.Cmp(target) == -1 {
 			//停止寻找
 			break

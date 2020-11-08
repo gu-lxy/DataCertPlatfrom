@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"DataCertPlatform/blockchain"
 	"github.com/astaxie/beego"
 	"fmt"
 	"strings"
@@ -9,6 +8,7 @@ import (
 	"DataCertPlatform/models"
 	"time"
 	"DataCertPlatform/utils"
+	"DataCertPlatform/blockchain"
 )
 
 /**
@@ -46,7 +46,7 @@ func (u *UploadFileController) Post() {
 
 	//3、计算文件的SHA256值
 	fileHash, err := utils.SHA256HashReader(file)
-	fmt.Println(fileHash)
+	//fmt.Println(fileHash)
 
 	//先查询用户id
 	user1, err := models.User{Phone: phone}.QueryUserByPhone()
@@ -80,13 +80,31 @@ func (u *UploadFileController) Post() {
 		return
 	}
 
-	//③将用户上传的文件的MD5值和sha256只保存到区块链上，即数据上链
-	block, err := blockchain.CHAIN.SaveData([]byte(md5String))
+	user := &models.User{
+		Phone: phone,
+	}
+	user, _ = user.QueryUserByPhone()
+	fmt.Println("用户的信息：", user.Name, user.Phone, user.Card)
+	//③ 将用户上传的文件的md5值和sha256值保存到区块链上，即数据上链
+	certRecord := models.CertRecord{
+		CertId:   []byte(md5String),
+		CertHash: []byte(fileHash),
+		CertName: user.Name,
+		CertCard: user.Card,
+		Phone:    user.Phone,
+		FileName: header.Filename,
+		FileSize: header.Size,
+		CertTime: time.Now().Unix(),
+	}
+	//序列化
+	certBytes, _ := certRecord.Serialize()
+	_, err = blockchain.CHAIN.SaveData(certBytes)
 	if err != nil {
-		u.Ctx.WriteString("抱歉，数据上链错误："+err.Error())
+		u.Ctx.WriteString("抱歉，数据上链错误：" + err.Error())
 		return
 	}
-	fmt.Println("恭喜，已将数据保存到区块链中，区块的高度是：",block)
+	//fmt.Println("恭喜，已经数据保存到区块链中，区块高度是:", block.Height)
+
 	//上传文件保存到数据库中成功
 	records, err := models.QueryRecordsByUserId(user1.Id)
 	if err != nil {
@@ -97,7 +115,6 @@ func (u *UploadFileController) Post() {
 	u.Data["Records"] = records
 	u.TplName = "list_record.html"
 }
-
 
 /**
  * 该post方法用于处理用户在客户端提交的认证文件

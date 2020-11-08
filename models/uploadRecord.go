@@ -13,7 +13,7 @@ type UploadRecord struct {
 	UserId         int
 	FileName       string
 	FileSize       int64
-	FileCert       string
+	FileCert       string //认证号：md5值
 	FileTitle      string
 	CertTime       int64
 	CertTimeFormat string // 仅作为格式化展示使用的字段

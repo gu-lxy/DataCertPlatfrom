@@ -14,7 +14,9 @@ type User struct {
 	Sex      string `form:"sex"`  //性别
 }
 
-//该方法用于更新数据库中用户记录的实名认证信息
+/**
+ * 该方法用于更新数据库中用户记录的实名认证信息
+ */
 func (u User) UpdateUser() (int64, error) {
 	rs, err := db_mysql.Db.Exec("update user set name = ?, card = ?, sex = ? where phone = ?", u.Name, u.Card, u.Sex, u.Phone)
 	if err != nil {
@@ -26,7 +28,6 @@ func (u User) UpdateUser() (int64, error) {
 	}
 	return id, nil
 }
-
 
 /**
  * 将用户的信息保存到数据库中
@@ -57,10 +58,10 @@ func (u User) QueryUser() (*User, error) {
 	//把脱敏的密码的md5值重新赋值为密码进行存储
 	u.Password = utils.MD5HashString(u.Password)
 
-	row := db_mysql.Db.QueryRow("select phone from user where phone = ? and password = ?",
+	row := db_mysql.Db.QueryRow("select phone, name, card from user where phone = ? and password = ?",
 		u.Phone, u.Password)
 
-	err := row.Scan(&u.Phone)
+	err := row.Scan(&u.Phone, &u.Name, &u.Card)
 	if err != nil {
 		return nil, err
 	}
@@ -68,9 +69,9 @@ func (u User) QueryUser() (*User, error) {
 }
 
 func (u User) QueryUserByPhone() (*User, error) {
-	row := db_mysql.Db.QueryRow("select id from user where phone = ?", u.Phone)
+	row := db_mysql.Db.QueryRow("select id, name, card, phone from user where phone = ?", u.Phone)
 	var user User
-	err := row.Scan(&user.Id)
+	err := row.Scan(&user.Id, &user.Name, &user.Card, &user.Phone)
 	if err != nil {
 		return nil, err
 	}
