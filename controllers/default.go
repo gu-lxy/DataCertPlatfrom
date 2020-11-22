@@ -14,4 +14,5 @@ type MainController struct {
 func (c *MainController) Get() {
 	//c.Ctx.WriteString("恭喜你，通过云服务器的公网ip访问到了我！")
 	c.TplName = "register.html"
+
 }
