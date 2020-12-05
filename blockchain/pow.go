@@ -68,7 +68,6 @@ func (p ProofOfWork) Run() ([]byte, int64) {
 			//停止寻找
 			break
 		}
-
 		nonce++ //自增，继续寻找
 	}
 	//将找到的符合规则的nonce返回

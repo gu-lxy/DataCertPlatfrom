@@ -41,6 +41,4 @@ func (s *SendSmsController) Post() {
 		Message:   result.Message,
 		TimeStamp: time.Now().Unix(),
 	}
-
-
 }
