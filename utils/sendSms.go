@@ -50,6 +50,7 @@ func SendSms(phone string, code string, templateType string) (*SmsResutl, error)
 	smsCode := SmsCode{
 		Code: code,
 	}
+
 	smsbytes, _ := json.Marshal(smsCode)
 	request.TemplateParam = string(smsbytes) //指定要发送的验证码
 
@@ -79,5 +80,6 @@ func GenRandCode(width int) string {
 	for i := 0; i < width; i++ {
 		fmt.Fprintf(&sb, "%d", numeric[ rand.Intn(r) ])
 	}
+
 	return sb.String()
 }
