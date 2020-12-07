@@ -30,7 +30,6 @@ func NewBlock(height int64, prevHash []byte, data []byte) Block {
 		Data:      data,
 		Version:   "0x01",
 	}
-
 	//找nonce值,通过工作量证明算法计算寻找
 	//挖矿竞争，获得记账权
 	xiaolong := NewPoW(block)
@@ -53,7 +52,6 @@ func NewBlock(height int64, prevHash []byte, data []byte) Block {
 	//	versionBytes,
 	//	nonceBytes,
 	//}, []byte{})
-	//
 	////调用Hash计算,对区块进行sha256哈希值计算
 	//block.Hash = utils.SHA256HashBlock(blockBytes)
 
@@ -67,6 +65,7 @@ func CreateGenesisBlock() Block {
 	genesisBlock := NewBlock(0, []byte{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, nil)
 	return genesisBlock
 }
+
 
 /**
  * 对区块进行序列化操作
