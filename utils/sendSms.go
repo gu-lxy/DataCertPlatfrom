@@ -65,6 +65,7 @@ func SendSms(phone string, code string, templateType string) (*SmsResutl, error)
 		Message:   response.Message,
 		RequestId: response.RequestId,
 	}
+
 	return smsResult, nil
 }
 
