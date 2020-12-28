@@ -232,5 +232,6 @@ func (bc BlockChain) QueryBlockByCertId(cert_id string) (*Block, error) {
 		}
 		return nil
 	})
+	//
 	return block, err
 }
